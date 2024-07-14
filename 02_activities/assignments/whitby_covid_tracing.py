@@ -1,6 +1,7 @@
 # Import necessary libraries
-import pandas as pd
 import numpy as np
+import pandas as pd
+
 import matplotlib.pyplot as plt
 import seaborn as sns
 
@@ -68,7 +69,7 @@ def simulate_event(m):
   return p_wedding_infections, p_wedding_traces
 
 # Set the random seed for reproducibility
-np.random.seed(10)
+np.random.seed(42)
 
 # Run the simulation 1000 times
 results = [simulate_event(m) for m in range(1000)]
