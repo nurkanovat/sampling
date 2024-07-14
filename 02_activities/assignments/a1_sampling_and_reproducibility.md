@@ -10,13 +10,52 @@ Modify the number of repetitions in the simulation to 1000 (from the original 50
 
 Alter the code so that it is reproducible. Describe the changes you made to the code and how they affected the reproducibility of the script file. The output does not need to match Whitby’s original blogpost/graphs, it just needs to produce the same output when run multiple times
 
-# Author: YOUR NAME
+# Author: Tetiana Nurkanova
 
+In the provided Python script `whitby_covid_tracing.py`, sampling occurs at two distinct stages within the simulation model.
+
+### Stage 1: Initial Infection
+
+```python
+infected_indices = np.random.choice(ppl.index, size=int(len(ppl) * ATTACK_RATE), replace=False)
+ppl.loc[infected_indices, 'infected'] = True
 ```
-Please write your explanation here...
 
+**Sampling Procedure:**
+- **Purpose:** This sampling determines which individuals attending events (weddings and brunches) get infected initially.
+- **Function Used:** `np.random.choice()`
+- **Sample Size:** `int(len(ppl) * ATTACK_RATE)`, where `ATTACK_RATE` is 0.10 (10%).
+- **Sampling Frame:** `ppl.index`, representing all individuals attending events.
+- **Distribution:** This uses a binomial distribution under the hood due to the nature of `np.random.choice()` when `replace=False`.
+- **Relation to Blog Post:** This mirrors the initial infection phase discussed in the blog post, where a certain percentage of attendees at events are assumed to become infected.
+
+### Stage 2: Primary Contact Tracing
+
+```python
+ppl.loc[ppl['infected'], 'traced'] = np.random.rand(sum(ppl['infected'])) < TRACE_SUCCESS
 ```
 
+**Sampling Procedure:**
+- **Purpose:** This stage decides which of the initially infected individuals will be successfully traced through primary contact tracing efforts.
+- **Function Used:** `np.random.rand()`
+- **Sample Size:** This is implicitly determined by the number of infected individuals (`sum(ppl['infected'])`).
+- **Sampling Frame:** All infected individuals (`ppl['infected']`).
+- **Distribution:** This uses a uniform distribution (`np.random.rand()`) to decide whether each infected individual is successfully traced, based on the `TRACE_SUCCESS` probability (which is 0.20).
+- **Relation to Blog Post:** This step corresponds to the primary contact tracing phase mentioned in the blog, where a certain fraction of contacts of confirmed cases are successfully traced and notified.
+
+### Summary
+
+- **Overall Sampling Process:** The script uses random sampling to simulate infection spread among event attendees and subsequent contact tracing efforts.
+- **Simulation Iterations:** The entire simulation is repeated 1000 times (`simulate_event(m)` for `m` in range(1000)), capturing variability across multiple scenarios.
+- **Visualization:** After simulation, the script visualizes the distribution of proportions of infections and traces attributed to weddings versus brunches using histograms.
+
+This simulation and sampling process are designed to model the impact of contact tracing on understanding the source of infections in different event settings, which aligns with the described objectives in the blog post.
+
+This code doesn't appear to reproduce the graphs from the original blog post.
+The code doesn't reproduce the graphs as well after the multiple runnings of code. The infectious from weddings has almost the same distribution as the one from the blog graphs, but observed proportion of cases traced back to weddings has different distribution than the one in the blog post. 
+
+To produce the same output when run multiple times the random seed should be set, by using the following code: ```np.random.seed(42)```
+It allows us to reproduce the same graphs each time. 
 
 ## Criteria
 
