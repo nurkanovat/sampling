@@ -16,30 +16,54 @@ Select one of the scenarios below and design a survey to meet the need(s) outlin
 
 # Your Changes
 
-The number of your chosen topic: `#`
+The number of your chosen topic: `#3`
 
 Describe the purpose of your survey:
 ```
-write your answer here...
+The purpose of this survey is to investigate how age impacts perceptions of popular music among individuals across different age groups and within the same individuals over time. Conducted as part of a sociology research project at the University of Toronto, the study seeks to elucidate the extent to which age influences music taste, contributing findings to an academic paper aimed at publication.
 ```
 
 Describe your target population, sampling frame, sampling units, and observational units:
 ```
-write your answer here...
+Target Population: Adults aged 18 and above from diverse backgrounds.
+
+
+Sampling Frame: University of Toronto students, community organizations, social media platforms, and music-related forums.
+
+Sampling Units: Individual respondents who participate in your survey or interview.
+
+Observational Units: Each respondent's responses on their music preferences and perceptions of popular music, analyzed to explore age-related influences.
+
 ```
 
 Your 5-10 question survey:
 ```
-1. write your question here...
-2. write your question here...
-3. write your question here...
-4. write your question here...
-5. write your question here...
-6. write your question here... (optional)
-7. write your question here... (optional)
-8. write your question here... (optional)
-9. write your question here... (optional)
-10. write your question here... (optional)
+1. How frequently do you listen to music? (Daily, several times a week, once a week, less than once a week, never)
+   
+2. What genres of music do you enjoy listening to the most? (Select all that apply: Pop, Rock, Hip-hop/Rap, Country, Electronic/Dance, Classical, Jazz, R&B/Soul, Indie/Alternative, Metal, Folk/Acoustic, Other)
+
+3. How would you describe your interest in discovering new music? (Very interested, somewhat interested, neutral, not very interested, not at all interested)
+
+4. Have your music preferences changed significantly compared to five years ago? (Yes, they have changed a lot; Yes, they have changed somewhat; No, they have remained largely the same)
+
+5. How influential are the following factors in shaping your music preferences? (Scale: 1 - Not influential at all, 5 - Very influential)
+   - Peer recommendations
+   - Family influence
+   - Media (e.g., radio, TV, streaming platforms)
+   - Personal experiences (e.g., concerts, events)
+   - Cultural trends
+   
+6. When considering popular music, do you think it reflects the current tastes of your age group? (Strongly agree, agree, neutral, disagree, strongly disagree)
+
+7. How important are lyrics versus musical composition in determining your enjoyment of a song? (Scale: 1 - Lyrics are much more important, 5 - Musical composition is much more important)
+
+8. Do you prefer to listen to music that you grew up with or music that is currently popular? (Prefer music from my youth, prefer current popular music, enjoy both equally)
+
+9. How do you discover new music? (Select all that apply: Streaming platforms, Radio, Social media, Recommendations from friends/family, Music blogs/websites, Concerts/festivals, Other)
+
+10. How do you perceive the music tastes of different age groups (e.g., younger generations, older generations) compared to your own? (Scale: 1 - Very different from my own, 5 - Very similar to my own)
+
+These questions aim to capture a range of factors influencing music taste across different ages and provide insights into how age influences perceptions of popular music. Adjustments can be made based on specific hypotheses or additional dimensions of interest in your research.
 ```
 
 ## Rubric
