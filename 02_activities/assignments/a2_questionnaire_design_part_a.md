@@ -34,6 +34,9 @@ Sampling Units: Individual respondents who participate in your survey or intervi
 
 Observational Units: Each respondent's responses on their music preferences and perceptions of popular music, analyzed to explore age-related influences.
 
+
+Sampling strategy: a stratified random sampling strategy will be used to ensure that different age groups are proportionately represented.
+
 ```
 
 Your 5-10 question survey:
